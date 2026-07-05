@@ -105,7 +105,7 @@ android {
     buildTypes {
         val oAuthRedirectSchemeBase = BuildTimeConfig.METADATA_HOST_REVERSED ?: "io.element.android"
         getByName("debug") {
-            resValue("string", "app_name", "$baseAppName dbg")
+            resValue("string", "app_name", "İbifrz")
             resValue(
                 "string",
                 "login_redirect_scheme",
@@ -116,7 +116,7 @@ android {
         }
 
         getByName("release") {
-            resValue("string", "app_name", baseAppName)
+            resValue("string", "app_name", "İbifrz")
             resValue(
                 "string",
                 "login_redirect_scheme",
@@ -153,7 +153,7 @@ android {
             initWith(release)
             applicationIdSuffix = ".nightly"
             versionNameSuffix = "-nightly"
-            resValue("string", "app_name", "$baseAppName nightly")
+            resValue("string", "app_name", "İbifrz")
             resValue(
                 "string",
                 "login_redirect_scheme",
