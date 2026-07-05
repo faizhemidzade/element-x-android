@@ -10,6 +10,7 @@ package io.element.android.appconfig
 
 object MatrixConfiguration {
     const val MATRIX_TO_PERMALINK_BASE_URL: String = "https://matrix.to/#/"
+    // Asıl giriş sunucusu adresi budur:
+    const val DEFAULT_HOMESERVER_URL: String = "https://secretcommunication.duckdns.org"
     val clientPermalinkBaseUrl: String? = "https://secretcommunication.duckdns.org"
-
 }
