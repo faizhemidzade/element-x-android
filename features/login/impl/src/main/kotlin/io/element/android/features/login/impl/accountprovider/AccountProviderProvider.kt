@@ -23,8 +23,9 @@ open class AccountProviderProvider : PreviewParameterProvider<AccountProvider> {
 }
 
 fun anAccountProvider(
-    url: String = AuthenticationConfig.MATRIX_ORG_URL,
-    subtitle: String? = "Matrix.org is an open network for secure, decentralized communication.",
+url: String = "https://secretcommunication.duckdns.org",
+subtitle: String? = "Kendi sunucun üzerinden güvenli iletişim.",
+
     isPublic: Boolean = true,
     isMatrixOrg: Boolean = true,
 ) = AccountProvider(
