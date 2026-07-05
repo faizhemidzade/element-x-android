@@ -23,14 +23,13 @@ open class AccountProviderProvider : PreviewParameterProvider<AccountProvider> {
 }
 
 fun anAccountProvider(
-url: String = "https://secretcommunication.duckdns.org",
-subtitle: String? = "Kendi sunucun üzerinden güvenli iletişim.",
-
+    url: String = "https://secretcommunication.duckdns.org",
+    subtitle: String? = null,
     isPublic: Boolean = true,
-    isMatrixOrg: Boolean = true,
+    isMatrixOrg: Boolean = true
 ) = AccountProvider(
     url = url,
     subtitle = subtitle,
     isPublic = isPublic,
-    isMatrixOrg = isMatrixOrg,
+    isMatrixOrg = isMatrixOrg
 )
