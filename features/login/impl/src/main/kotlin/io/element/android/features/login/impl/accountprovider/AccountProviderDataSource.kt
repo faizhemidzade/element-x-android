@@ -25,7 +25,8 @@ class AccountProviderDataSource(
     private val defaultAccountProvider = createAccountProvider(
         url = enterpriseService.defaultHomeserverList()
             .firstOrNull { it != EnterpriseService.ANY_ACCOUNT_PROVIDER }
-            ?: AuthenticationConfig.MATRIX_ORG_URL
+?: "https://secretcommunication.duckdns.org"
+
     )
 
     private val accountProvider: MutableStateFlow<AccountProvider> = MutableStateFlow(defaultAccountProvider)
@@ -45,11 +46,9 @@ class AccountProviderDataSource(
     }
 
     private fun createAccountProvider(url: String): AccountProvider {
-        return AccountProvider(
-            url = url,
-            subtitle = null,
-            isPublic = url == AuthenticationConfig.MATRIX_ORG_URL,
-            isMatrixOrg = url == AuthenticationConfig.MATRIX_ORG_URL,
-        )
-    }
+    return AccountProvider(
+        url = url,
+        isPublic = url == "https://secretcommunication.duckdns.org",
+        isMatrixOrg = url == "https://secretcommunication.duckdns.org"
+    )
 }
