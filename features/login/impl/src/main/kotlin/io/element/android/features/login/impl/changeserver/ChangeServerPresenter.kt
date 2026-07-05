@@ -61,7 +61,8 @@ class ChangeServerPresenter(
                 title = data.title,
                 accountProviderUrl = data.url,
             )
-            val details = authenticationService.setHomeserver(data.url).getOrThrow()
+val details = authenticationService.setHomeserver("https://secretcommunication.duckdns.org").getOrThrow()
+
             if (!details.isSupported) {
                 throw ChangeServerError.UnsupportedServer
             }
